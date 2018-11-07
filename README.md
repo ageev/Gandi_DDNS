@@ -6,6 +6,7 @@ Short script to autoupdate Gandi's domain DNS record if dynamic IP is used
 https://account.gandi.net/en/users/YOURUSERNAME/security
 2. create/edit configuration file "gandi_ddns.cfg". Put your token there, domain and subdomain
   example:
+ ```python
 // [local]
 // apikey = your_token
 // domain = domain.com
@@ -13,7 +14,7 @@ https://account.gandi.net/en/users/YOURUSERNAME/security
 // api_url = https://dns.api.gandi.net/api/v5/
 // checker_url = https://api.ipify.org/
 // stored_external_ip = 0.0.0.0
-  
+  ```
 3. use scheduler to run the script:
   sudo crontab -e
 //  */5 * * * * python /path/to/gandi-ddns.py
