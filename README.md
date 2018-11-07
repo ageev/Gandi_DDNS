@@ -16,8 +16,10 @@ checker_url = https://api.ipify.org/
 stored_external_ip = 0.0.0.0
 ```
 3. use scheduler to run the script:
-`sudo crontab -e`
-`*/5 * * * * python /path/to/gandi-ddns.py`
+```
+sudo crontab -e
+*/5 * * * * python /path/to/gandi-ddns.py
+```
   
  # Links
  * initial idea https://github.com/matt1/gandi-ddns
