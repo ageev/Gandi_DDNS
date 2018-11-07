@@ -3,11 +3,11 @@ Short script to autoupdate Gandi's domain DNS record if dynamic IP is used
 
 #How to use
 1. Get Gandi's LiveDNS token from here:
-*https://account.gandi.net/en/users/<YOUR USERNAME>/security
+*https://account.gandi.net/en/users/YOURUSERNAME/security
 2. create/edit configuration file "gandi_ddns.cfg". Put your token there, domain and subdomain
   example:
   [local]
-apikey = <your_token>
+apikey = your_token
 domain = domain.com
 record = subdomain
 api_url = https://dns.api.gandi.net/api/v5/
