@@ -1,7 +1,7 @@
 # Gandi_DDNS
 Short script to autoupdate Gandi's domain DNS record if dynamic IP is used
 
-#How to use
+# How to use
 1. Get Gandi's LiveDNS token from here:
 *https://account.gandi.net/en/users/YOURUSERNAME/security
 2. create/edit configuration file "gandi_ddns.cfg". Put your token there, domain and subdomain
@@ -18,6 +18,6 @@ stored_external_ip = 0.0.0.0
   sudo crontab -e
   */5 * * * * python /path/to/gandi-ddns.py
   
- #Links
+ # Links
  initial idea https://github.com/matt1/gandi-ddns
  Gandi API page https://doc.livedns.gandi.net/
