@@ -20,7 +20,14 @@ stored_external_ip = 0.0.0.0
 sudo crontab -e
 */5 * * * * python /path/to/gandi-ddns.py
 ```
-  
+
+## For ASUS routers with Merlin FW
+```
+admin@router:/tmp/home/root# cat /jffs/scripts/init-start
+#!/bin/sh
+# Script to update Gandi DNS
+cru a gandi_ddns "*/15 * * * * cd /mnt/sda6/entware/var/opt/gandi_ddns && python gandi_ddns.py >> gandi_dns.log"
+```
  # Links
  * initial idea https://github.com/matt1/gandi-ddns
  * Gandi API page https://doc.livedns.gandi.net/
