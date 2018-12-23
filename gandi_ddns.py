@@ -9,8 +9,14 @@ import requests, json, os, configparser, sys, logging
 
 dir_path = os.path.dirname(os.path.realpath(__file__)) # get current script dir
 
+# set log dir
+if os.path.exists('C:/Windows/'):
+    LOG_DIR = dir_path
+else:
+    LOG_DIR = "/var/log/"
+
 logging.basicConfig(
-    filename = os.path.join(dir_path, 'gandi_ddns.log'),
+    filename = os.path.join(LOG_DIR, 'gandi_ddns.log'),
     format='%(asctime)s %(levelname)-5s %(message)s', 
     datefmt='%Y-%m-%d %H:%M:%S', 
     level=logging.DEBUG
@@ -55,12 +61,11 @@ def main():
 #         result = response.json()[u'rrset_values'][0]
 #     except requests.exceptions.HTTPError as e:
 #         print('[ERROR] Unable to get external IP address from Gandi: ' +e)
-#         sys.exit(2)
+#         sys.exit()
 #     except json.decoder.JSONDecodeError:
 #         print('[ERROR] Json error parsing Gandi server reply')
 #         print(response.text)
-#         sys.exit(2)
-
+#         sys.exit()
 #     return result
 
 def get_external_ip(ip_url):
@@ -68,7 +73,7 @@ def get_external_ip(ip_url):
         response = requests.get(ip_url)
     except requests.exceptions.HTTPError:
         logger.error('Unable to get external IP address from ' + ip_url)
-        sys.exit(2)
+        sys.exit()
     return response.text
 
 def set_gandi_ip(domain_name, record_name, new_ip):
