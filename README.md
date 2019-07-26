@@ -34,5 +34,5 @@ cru a gandi_ddns "*/15 * * * * cd /mnt/sda6/entware/var/opt/gandi_ddns && python
 
 # BONUS
 ## Gandi script to search for a short domain names - gandi_check_domain.py
-https://github.com/ageev/others/blob/master/5_symbols_domains.log - example of the output
+https://github.com/ageev/others/blob/master/5_symbols_domains.log - example of the output. /n
 don't forget to put your token to gandi_check_domain.cfg (see .cfg file at the repo as an example. You need only token here)
