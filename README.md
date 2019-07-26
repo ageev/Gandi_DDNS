@@ -32,7 +32,7 @@ cru a gandi_ddns "*/15 * * * * cd /mnt/sda6/entware/var/opt/gandi_ddns && python
  * initial idea https://github.com/matt1/gandi-ddns
  * Gandi API page https://doc.livedns.gandi.net/
 
-#BONUS
+# BONUS
 ## Gandi script to search for a short domain names - gandi_check_domain.py
 https://github.com/ageev/others/blob/master/5_symbols_domains.log - example of the output
 don't forget to put your token to gandi_check_domain.cfg (see .cfg file at the repo as an example. You need only token here)
